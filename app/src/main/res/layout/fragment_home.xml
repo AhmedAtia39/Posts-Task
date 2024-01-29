@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sa.com.ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/Theme.Material3.DayNight.NoActionBar"
+        app:title="@string/home_page"
+        app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_posts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+        tools:listitem="@layout/post_item"
+        tools:showIn="@layout/fragment_home" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_posts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorSize="@dimen/_60sdp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_posts"
+        app:layout_constraintEnd_toEndOf="@id/rv_posts"
+        app:layout_constraintStart_toStartOf="@id/rv_posts"
+        app:layout_constraintTop_toTopOf="@id/rv_posts" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/posts_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceTitleLarge"
+        app:layout_constraintBottom_toBottomOf="@id/rv_posts"
+        app:layout_constraintEnd_toEndOf="@id/rv_posts"
+        app:layout_constraintStart_toStartOf="@id/rv_posts"
+        app:layout_constraintTop_toTopOf="@id/rv_posts"
+        tools:text="@string/msg_no_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

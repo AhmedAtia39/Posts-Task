@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="fab_margin">@dimen/_16sdp</dimen>
+    <dimen name="dialog_padding">@dimen/_24sdp</dimen>
+</resources>

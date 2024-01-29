@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">اختبار</string>
+
+    <string name="msg_no_result">لا توجد نتائج</string>
+    <string name="lbl_settings">الاعدادت</string>
+    <string name="lbl_close">اغلاق</string>
+    <string name="error_happened">حدث خطأ</string>
+    <string name="home_page">الصفحة الرئيسية</string>
+    <string name="connect_network_please">رجاء الإتصال بالنت</string>
+    <string name="lbl_search">البحث</string>
+    <string name="fragment_post_details">تفاصيل المقال</string>
+</resources>

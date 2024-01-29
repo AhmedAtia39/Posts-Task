@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sa.com.ui.postDetails.PostDetailsFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/colorPrimaryDark"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/Theme.Material3.DayNight.NoActionBar"
+        app:titleTextAppearance="@style/TextAppearance.Material3.TitleSmall" >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            app:layout_constrainedWidth="true"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+        android:fillViewport="true">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textAlignment="viewStart"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_18ssp"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorSize="@dimen/_60sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/postMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/msg_no_result"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/_24ssp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
